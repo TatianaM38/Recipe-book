@@ -8,7 +8,7 @@ namespace Recipe_book
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("");
+            Console.WriteLine("Recipe Book soon");
         }
     }
 }
