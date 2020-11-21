@@ -7,7 +7,7 @@ namespace Recipe_book
         public void DesignMenu()
         {
             Console.BackgroundColor = ConsoleColor.Black;
-            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.Title = "Yummy book";
             string title = @"
                            * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *                        
@@ -23,7 +23,7 @@ namespace Recipe_book
 
             Console.WriteLine(title);
 
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
             string recepty = @" 
                                          --------------------------------------
                                                   ╦═╗┌─┐┌─┐┌─┐┌─┐┌┬┐┬ ┬    
@@ -32,7 +32,7 @@ namespace Recipe_book
                                          --------------------------------------";
             Console.Write(recepty);
 
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
             string Edit = @" 
                                      
                                          --------------------------------------
@@ -43,7 +43,7 @@ namespace Recipe_book
             Console.Write(Edit);
 
 
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
             string add = @"
 
                                          --------------------------------------
@@ -74,6 +74,7 @@ namespace Recipe_book
                 case "r":
                 case "R":
                      {
+                        Console.Clear();
                         Console.WriteLine("Vybrali ste r");
                         Console.ReadKey();
 
@@ -83,6 +84,7 @@ namespace Recipe_book
                 case "k":
                 case "K":
                     {
+                        Console.Clear();
                         Console.WriteLine("Vybrali ste k ");
                         Console.ReadKey();
 
@@ -92,6 +94,7 @@ namespace Recipe_book
                 case "p":
                 case "P":
                     {
+                        Console.Clear();
                         Console.WriteLine("Vybrali ste p ");
                         Console.ReadKey();
 
@@ -100,6 +103,7 @@ namespace Recipe_book
 
                 default:
                     {
+
                         Console.WriteLine("Vybral si si zlú možnosť");
                         Console.ReadKey();
                         Console.Clear();
