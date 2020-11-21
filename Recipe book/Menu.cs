@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace Recipe_book
 {
     class Menu 
@@ -56,17 +57,57 @@ namespace Recipe_book
 
             Console.Write(add);
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Ak chcete prejsť na recepty, kliknite na klávesu 'r'.");
-            Console.WriteLine("                            Ak chcete editovať recepty, kliknite na klávesu 'e'.");
-            Console.WriteLine("                            Ak chcete pridať recepty, kliknite na klávesu 'p'");
+            Console.WriteLine("Ak chcete prejsť na recepty, stlačte na klávesu 'r' a potvrďte klávesou Enter.");
+            Console.WriteLine("                            Ak chcete editovať recepty, stlačte na klávesu 'e' a potvrďte klávesou Enter.");
+            Console.WriteLine("                            Ak chcete pridať recepty, stlačte na klávesu 'p' a potvrďte klávesou Enter.");
 
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("");
-            Console.WriteLine("                            Ak chcete ukončiť aplikáciu 2x kliknite na klávesu Enter");
-
-            Console.ReadLine();
+            Console.WriteLine("                            Ak chcete ukončiť aplikáciu stlačte na klávesu 'ctrl' a klávesu 'c' zároveň.");
 
             
-        }
+
+            char button = Convert.ToChar(Console.Read());
+            string buttonString = button.ToString();
+            switch (buttonString)
+            {
+
+                case "r":
+                case "R":
+                     {
+                        Console.WriteLine("Vybrali ste r");
+                        Console.ReadKey();
+
+                        break;
+                     }
+
+                case "e":
+                case "E":
+                    {
+                        Console.WriteLine("Vybrali ste e ");
+                        Console.ReadKey();
+
+                        break;
+                    }
+
+                case "p":
+                case "P":
+                    {
+                        Console.WriteLine("Vybrali ste p ");
+                        Console.ReadKey();
+                        break;           
+                    }
+
+                default:
+                    {
+                        Console.WriteLine("Vybral si si zlú možnosť");
+                        Console.ReadKey();
+                        Console.Clear();
+                        Menu hlavna = new Menu();
+                        hlavna.DesignMenu();
+                        break;
+                    }
+            }
+        }   
     }
 }
