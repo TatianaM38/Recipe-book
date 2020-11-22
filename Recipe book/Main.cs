@@ -75,8 +75,9 @@ namespace Recipe_book
                 case "R":
                      {
                         Console.Clear();
-                        Console.WriteLine("Vybrali ste r");
-                        Console.ReadKey();
+                        Recipes rec = new Recipes();
+                        rec.RecipeClass();
+                       
 
                         break;
                      }
@@ -85,8 +86,8 @@ namespace Recipe_book
                 case "K":
                     {
                         Console.Clear();
-                        Console.WriteLine("Vybrali ste k ");
-                        Console.ReadKey();
+                        Category cat = new Category();
+                        cat.CategoryClass();
 
                         break;
                     }
@@ -95,11 +96,12 @@ namespace Recipe_book
                 case "P":
                     {
                         Console.Clear();
-                        Console.WriteLine("Vybrali ste p ");
-                        Console.ReadKey();
+                        AddRecipe addr = new AddRecipe();
+                        addr.AddRec();
 
                         break;           
                     }
+            
 
                 default:
                     {
@@ -113,6 +115,8 @@ namespace Recipe_book
                         break;
                     }
             }
+
+
         }   
     }
 }
