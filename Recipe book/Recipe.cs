@@ -7,8 +7,20 @@ namespace Recipe_book
     {
         public void RecipeClass() 
         {
-            Console.WriteLine("Tu budú recepty");
+            Console.ForegroundColor = ConsoleColor.Red;
+            string rec = @"     
+                                   ██████╗ ███████╗ ██████╗███████╗██████╗ ████████╗██╗   ██╗
+                                   ██╔══██╗██╔════╝██╔════╝██╔════╝██╔══██╗╚══██╔══╝╚██╗ ██╔╝
+                                   ██████╔╝█████╗  ██║     █████╗  ██████╔╝   ██║    ╚████╔╝ 
+                                   ██╔══██╗██╔══╝  ██║     ██╔══╝  ██╔═══╝    ██║     ╚██╔╝  
+                                   ██║  ██║███████╗╚██████╗███████╗██║        ██║      ██║   
+                                   ╚═╝  ╚═╝╚══════╝ ╚═════╝╚══════╝╚═╝        ╚═╝      ╚═╝                                                                    
+                                                   ";
+            Console.Write(rec);
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine("*Tu budú recepty*");
             Console.ReadKey();
+
         }
     }
 }

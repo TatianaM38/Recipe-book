@@ -11,7 +11,7 @@ namespace Recipe_book
             Console.Title = "Yummy book";
             string title = @"
                            * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *                        
-                           *                                          _                 _      *       
+                           *                                                                   *
                            *  _   _ _   _ _ __ ___  _ __ ___  _   _  | |__   ___   ___ | | __  *
                            * | | | | | | | '_ ` _ \| '_ ` _ \| | | | | '_ \ / _ \ / _ \| |/ /  * 
                            * | |_| | |_| | | | | | | | | | | | |_| | | |_) | (_) | (_) |   <   *
@@ -26,6 +26,7 @@ namespace Recipe_book
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             string recepty = @" 
                                          --------------------------------------
+
                                                   ╦═╗┌─┐┌─┐┌─┐┌─┐┌┬┐┬ ┬    
                                               *   ╠╦╝├┤ │  ├┤ ├─┘ │ └┬┘   *        
                                                   ╩╚═└─┘└─┘└─┘┴   ┴  ┴ 
@@ -35,10 +36,11 @@ namespace Recipe_book
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             string Edit = @" 
                                      
-                                         --------------------------------------
-                                                ╦╔═┌─┐┌┬┐┌─┐┌─┐┌─┐┬─┐┬┌─┐
-                                            *   ╠╩╗├─┤ │ ├┤ │ ┬│ │├┬┘│├┤    *
-                                                ╩ ╩┴ ┴ ┴ └─┘└─┘└─┘┴└─┴└─┘ 
+                                         --------------------------------------          
+                                                 /      \/
+                                            ╔╗╔┌─┐ ┬┌─┐┌┬┐  ┬─┐┌─┐┌─┐┌─┐┌─┐┌┬┐
+                                         *  ║║║├─┤ │└─┐ │   ├┬┘├┤ │  ├┤ ├─┘ │  *
+                                            ╝╚╝┴ ┴└┘└─┘ ┴   ┴└─└─┘└─┘└─┘┴   ┴    
                                          -------------------------------------- ";
             Console.Write(Edit);
 
@@ -47,22 +49,25 @@ namespace Recipe_book
             string add = @"
 
                                          --------------------------------------
-                                          ╔═╗┬─┐┬┌┬┐┌─┐ ┬  ┬─┐┌─┐┌─┐┌─┐┌─┐┌┬┐
-                                        * ╠═╝├┬┘│ ││├─┤ │  ├┬┘├┤ │  ├┤ ├─┘ │  *
-                                          ╩  ┴└─┴─┴┘┴ ┴└┘  ┴└─└─┘└─┘└─┘┴   ┴  
+                                                        \/
+                                          ╔═╗┬─┐┬┌┬┐┌─┐┌┬┐  ┬─┐┌─┐┌─┐┌─┐┌─┐┌┬┐
+                                       *  ╠═╝├┬┘│ ││├─┤ │   ├┬┘├┤ │  ├┤ ├─┘ │   *
+                                          ╩  ┴└─┴─┴┘┴ ┴ ┴   ┴└─└─┘└─┘└─┘┴   ┴ 
                                          --------------------------------------
 
-                   ";
+";
 
             Console.Write(add);
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Ak chcete prejsť na recepty, stlačte na klávesu 'r' a potvrďte klávesou Enter.");
-            Console.WriteLine("                   Ak chcete nájsť recepty podľa kategorie, stlačte na klávesu 'k' a potvrďte klávesou Enter.");
-            Console.WriteLine("                   Ak chcete pridať recepty, stlačte na klávesu 'p' a potvrďte klávesou Enter.");
+            Console.WriteLine("                   --------------------------------------------------------------------------------");
+            Console.WriteLine("                     Ak chcete prejsť na recepty, stlačte na klávesu 'r' a potvrďte klávesou Enter.");
+            Console.WriteLine("                  *  Ak chcete nájsť recepty, stlačte na klávesu 'n' a potvrďte klávesou Enter.    *");
+            Console.WriteLine("                     Ak chcete pridať recepty, stlačte na klávesu 'p' a potvrďte klávesou Enter.");
+            Console.WriteLine("                   --------------------------------------------------------------------------------");
 
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("");
-            Console.WriteLine("                   Ak chcete ukončiť aplikáciu stlačte na klávesu 'ctrl' a klávesu 'c' zároveň.");
+            Console.WriteLine("                    Ak chcete ukončiť aplikáciu stlačte na klávesu 'ctrl' a klávesu 'c' zároveň.");
 
             
 
@@ -82,12 +87,12 @@ namespace Recipe_book
                         break;
                      }
 
-                case "k":
-                case "K":
+                case "n":
+                case "N":
                     {
                         Console.Clear();
-                        Category cat = new Category();
-                        cat.CategoryClass();
+                        Find findr = new Find();
+                        findr.FindRecipe();
 
                         break;
                     }

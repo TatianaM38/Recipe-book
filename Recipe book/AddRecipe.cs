@@ -6,7 +6,8 @@ namespace Recipe_book
     {
         public void AddRec()
         {
-            Console.WriteLine("Tu sa budú môcť pridávať recepty");
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine("*Tu sa budú môcť pridávať recepty*");
             Console.ReadKey();
         }
     }
