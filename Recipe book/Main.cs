@@ -6,6 +6,7 @@ namespace Recipe_book
     {
         public void DesignMenu()
         {
+         
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.Title = "Yummy book";
@@ -19,45 +20,51 @@ namespace Recipe_book
                            *   __/ |                           __/ |                           *
                            *  |___/                           |___/                            *            
                            *                                                                   *
-                           * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ";
+                           * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                                 ";
 
             Console.WriteLine(title);
-
+   
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             string recepty = @" 
-                                         --------------------------------------
+                                     --------------------------------------------------
 
-                                                  ╦═╗┌─┐┌─┐┌─┐┌─┐┌┬┐┬ ┬    
-                                              *   ╠╦╝├┤ │  ├┤ ├─┘ │ └┬┘   *        
-                                                  ╩╚═└─┘└─┘└─┘┴   ┴  ┴ 
-                                         --------------------------------------";
-            Console.Write(recepty);
-
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
-            string Edit = @" 
+                                           ┬─┐┌─┐┌─┐┌─┐┌─┐┌┬┐┬ ┬  ┌─  ┬─┐  ─┐
+                                           ├┬┘├┤ │  ├┤ ├─┘ │ └┬┘  │   ├┬┘   │
+                                           ┴└─└─┘└─┘└─┘┴   ┴  ┴   └─  ┴└─  ─┘ 
+                                     --------------------------------------------------
+            
                                      
-                                         --------------------------------------          
+                                     --------------------------------------------------          
                                                  /      \/
-                                            ╔╗╔┌─┐ ┬┌─┐┌┬┐  ┬─┐┌─┐┌─┐┌─┐┌─┐┌┬┐
-                                         *  ║║║├─┤ │└─┐ │   ├┬┘├┤ │  ├┤ ├─┘ │  *
-                                            ╝╚╝┴ ┴└┘└─┘ ┴   ┴└─└─┘└─┘└─┘┴   ┴    
-                                         -------------------------------------- ";
-            Console.Write(Edit);
+                                         ┌┐┌┌─┐ ┬┌─┐┌┬┐  ┬─┐┌─┐┌─┐┌─┐┌─┐┌┬┐  ┌─  ┌┐┌  ─┐
+                                         │││├─┤ │└─┐ │   ├┬┘├┤ │  ├┤ ├─┘ │   │   │││   │
+                                         ┘└┘┴ ┴└┘└─┘ ┴   ┴└─└─┘└─┘└─┘┴   ┴   └─  ┘└┘  ─┘    
+                                     --------------------------------------------------- 
+           
 
+                                     ---------------------------------------------------
+                                                       \/
+                                       ┌─┐┬─┐┬┌┬┐┌─┐┌┬┐  ┬─┐┌─┐┌─┐┌─┐┌─┐┌┬┐  ┌─  ┌─┐  ─┐
+                                       ├─┘├┬┘│ ││├─┤ │   ├┬┘├┤ │  ├┤ ├─┘ │   │   ├─┘   │
+                                       ┴  ┴└─┴─┴┘┴ ┴ ┴   ┴└─└─┘└─┘└─┘┴   ┴   └─  ┴    ─┘
+                                     --------------------------------------------------- ";
 
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
-            string add = @"
+              Console.Write(recepty);
 
-                                         --------------------------------------
-                                                        \/
-                                          ╔═╗┬─┐┬┌┬┐┌─┐┌┬┐  ┬─┐┌─┐┌─┐┌─┐┌─┐┌┬┐
-                                       *  ╠═╝├┬┘│ ││├─┤ │   ├┬┘├┤ │  ├┤ ├─┘ │   *
-                                          ╩  ┴└─┴─┴┘┴ ┴ ┴   ┴└─└─┘└─┘└─┘┴   ┴ 
-                                         --------------------------------------
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            string ext = @"
+
+                                     ---------------------------------------------------
+                                                    \/   \/
+                                        ┬ ┬┬┌─┌─┐┌┐┌┌─┐┬┌┬┐  ┌─  ┬ ┬  ─┐  
+                                        │ │├┴┐│ │││││  │ │   │   │ │   │  
+                                        └─┘┴ ┴└─┘┘└┘└─┘┴ ┴   └─  └─┘  ─┘ 
+                                     ---------------------------------------------------
+
 
 ";
-
-            Console.Write(add);
+            Console.WriteLine(ext);
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("                   --------------------------------------------------------------------------------");
             Console.WriteLine("                     Ak chcete prejsť na recepty, stlačte na klávesu 'r' a potvrďte klávesou Enter.");
@@ -66,10 +73,8 @@ namespace Recipe_book
             Console.WriteLine("                   --------------------------------------------------------------------------------");
 
             Console.ForegroundColor = ConsoleColor.DarkRed;
-            Console.WriteLine("");
-            Console.WriteLine("                    Ak chcete ukončiť aplikáciu stlačte na klávesu 'ctrl' a klávesu 'c' zároveň.");
-
-            
+           
+          
 
             char button = Convert.ToChar(Console.Read());
             string buttonString = button.ToString();
@@ -106,13 +111,19 @@ namespace Recipe_book
 
                         break;           
                     }
-            
+
+                case "x":
+                case "X":
+                    {
+                        Environment.Exit(0);
+
+                        break;
+                    }
+
 
                 default:
                     {
 
-                        Console.WriteLine("Vybral si si zlú možnosť");
-                        Console.ReadKey();
                         Console.Clear();
                         Menu hlavna = new Menu();
                         hlavna.DesignMenu();

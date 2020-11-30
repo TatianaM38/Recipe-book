@@ -10,6 +10,8 @@ namespace Recipe_book
     {
         public void RecipeClass() 
         {
+ 
+
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             string r = @"     
                                             _____                     _         
@@ -95,125 +97,140 @@ namespace Recipe_book
 
 ";
             Console.Write(str);
-            Console.ReadKey();
 
 
-            char ch = Convert.ToChar(Console.Read());
-            string chString = ch.ToString();
-            switch (chString)
-            {
-                case "s":
-                case "S":
-                    {
-                        Console.WriteLine("Späť do menu");
-                        Console.ReadKey();
-                        Menu hlavna = new Menu();
-                        hlavna.DesignMenu();
+           
+            
 
-                        break;
-                    }
+                 char button = Convert.ToChar(Console.Read());
+                 string buttonString = button.ToString();
+                 switch (buttonString)
+                 {
+                    case "s":
+                    case "S":
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Späť do menu");
+                            Menu hlavna = new Menu();
+                            hlavna.DesignMenu();
 
-                case "0":
-                    {
-                 
-                        Console.WriteLine("Talianske tiramisu.");
+                            break;
+                        }
 
-                        break;
+                    case "0":
+                        {
 
-                    }
+                          Console.Clear();
+                          Recipe0 recipe0 = new Recipe0();
+                          recipe0.Recept0();
 
+                         
+                            break;
 
-                case "1":
-                    {
-                        Console.Clear();
-                        Console.WriteLine("Cestoviny s kuracími prsiami Alfredo.");
-
-                        break;
-                    }
+                        }
 
 
-                case "2":
-                    {
-                        Console.Clear();
-                        Console.WriteLine("Karamelový cheesecake s čokoládou.");
+                    case "1":
+                        {
+                            Console.Clear();
+                            Recipe1 recipe1 = new Recipe1();
+                            recipe1.Recept1();
 
-                        break;
-                    }
+                            break;
+                        }
 
 
-                case "3":
-                    {
-                        Console.Clear();
-                        Console.WriteLine("Polesníky.");
+                    case "2":
+                        {
+                            Console.Clear();
+                            Recipe2 recipe2 = new Recipe2();
+                            recipe2.Recept2();
 
                         break;
-                           
-                    }
+                        }
 
 
-                case "4":
-                    {
-                        Console.Clear();
-                        Console.WriteLine("Kurací perkelt so smotanou a haluškami.");
-
-                        break;
-                    }
-
-
-                case "5":
-                    {
-                        Console.Clear();
-                        Console.WriteLine("Banánové lievance s čokoládou.");
+                    case "3":
+                        {
+                            Console.Clear();
+                            Recipe3 recipe3 = new Recipe3();
+                            recipe3.Recept3();
 
                         break;
-                    }
 
-                case "6":
-                    {
-                        Console.Clear();
-                        Console.WriteLine("Gyros s kuracím mäsom v tortille.");
-
-                        break;
-                    }
+                        }
 
 
-                case "7":
-                    {
-                        Console.Clear();
-                        Console.WriteLine("čokoládové cookies.");
+                    case "4":
+                        {
+                            Console.Clear();
+                            Recipe4 recipe4 = new Recipe4();
+                            recipe4.Recept4();
 
                         break;
-                    }
+                        }
 
-                case "8":
-                    {
-                        Console.Clear();
-                        Console.WriteLine("Čokoládová torta s jahodami.");
 
-                        break;
-                    }
-
-                case "9":
-                    {
-                        Console.Clear();
-                        Console.WriteLine("Zemiakové pirohy s mäsovou plnkou.");
+                    case "5":
+                        {
+                            Console.Clear();
+                            Recipe5 recipe5 = new Recipe5();
+                            recipe5.Recept5();
 
                         break;
-                    }
+                        }
 
-                default:
-                    {
+                    case "6":
+                        {
+                            Console.Clear();
+                            Recipe6 recipe6 = new Recipe6();
+                            recipe6.Recept6();
 
-                        Console.WriteLine("Vybral si si zlú možnosť");
-                        Console.ReadKey();
-                        Console.Clear();
-                        Recipes rec = new Recipes();
-                        rec.RecipeClass();
+                            break;
+                        }
+
+
+                    case "7":
+                        {
+                            Console.Clear();
+                            Recipe7 recipe7 = new Recipe7();
+                            recipe7.Recept7(); ;
+
+                            break;
+                        }
+
+                    case "8":
+                        {
+                            Console.Clear();
+                            Recipe8 recipe8 = new Recipe8();
+                             recipe8.Recept8();
 
                         break;
-                    }
+                        }
 
-            }
+                    case "9":
+                        {
+                            Console.Clear();
+                            Recipe9 recipe9 = new Recipe9();
+                            recipe9.Recept9();
+
+                        break;
+                        }
+
+                    default:
+                        {
+
+                            Console.Clear();
+                            Recipes rec = new Recipes();
+                            rec.RecipeClass();
+
+                            break;
+                        }
+
+
+                 }
+             
+            
 
         }
     }
