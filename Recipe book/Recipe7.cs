@@ -38,7 +38,7 @@ namespace Recipe_book
                 if (xml0.NodeType == XmlNodeType.Element && xml0.Name == "eigprocess")
                 {
                     string s5 = xml0.ReadElementString();
-                    Console.WriteLine("Postup prípravy: " + s5);
+                    Console.WriteLine(s5);
                 }
                 if (xml0.NodeType == XmlNodeType.Element && xml0.Name == "eigauthor")
                 {

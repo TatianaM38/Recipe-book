@@ -35,7 +35,11 @@ namespace Recipe_book
                             *────────────────────────────────────────────────────────────────* 
 
                             .────────────────────────────────────────────────────────────────.
-                            |                        [P] PRIDAŤ RECEPT                       |
+                            |                        [P]  PRIDAŤ RECEPT                      |
+                            *────────────────────────────────────────────────────────────────* 
+
+                            .────────────────────────────────────────────────────────────────.
+                            |                        [A]  O APLIKÁCIÍ                        |
                             *────────────────────────────────────────────────────────────────* ";
                                      
                                     
@@ -97,6 +101,62 @@ namespace Recipe_book
 
                         break;           
                     }
+
+                case "a":
+                case "A":
+                    {
+                        Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.DarkCyan;
+                        string str = @"
+
+                                                                         ██
+                                                                        ██
+
+                    ██╗███╗   ██╗███████╗ ██████╗ ██████╗ ███╗   ███╗ █████╗  ██████╗██╗███████╗    
+                    ██║████╗  ██║██╔════╝██╔═══██╗██╔══██╗████╗ ████║██╔══██╗██╔════╝██║██╔════╝    
+                    ██║██╔██╗ ██║█████╗  ██║   ██║██████╔╝██╔████╔██║███████║██║     ██║█████╗      
+                    ██║██║╚██╗██║██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║██╔══██║██║     ██║██╔══╝      
+                    ██║██║ ╚████║██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║██║  ██║╚██████╗██║███████╗    
+                    ╚═╝╚═╝  ╚═══╝╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝╚══════╝    
+                                                                                ";
+                        Console.WriteLine(str);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.WriteLine("Vítame vás v tomto receptári :-* ");
+                        Console.WriteLine("Nájdete tu plno vynikajúcich receptov rôznych druhov z ktorých si každý vyberie.");
+                        Console.WriteLine("Dúfam, že vám budú všetky recepty chutiť <3 ");
+                        Console.WriteLine("");
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        Console.WriteLine("Vytvorené T.Michalíkovou a B.Dujčíkovou.");
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        string s = @"
+
+
+                           .────────────────────────────────────────────────────────────────.
+                           |                [S]  Späť do hlavnej ponuky                     |
+                           *────────────────────────────────────────────────────────────────* ";
+                        Console.WriteLine(s);
+
+                        Console.ReadLine();
+
+                        char button1 = Convert.ToChar(Console.Read());
+                        string buttonString1 = button1.ToString();
+                        if (buttonString1 == "S")
+                        {
+                            Console.Clear();
+                            Menu hlavna = new Menu();
+                            hlavna.DesignMenu();
+                        }
+                        else if (buttonString1 == "s")
+                        {
+                            Console.Clear();
+                            Menu hlavna = new Menu();
+                            hlavna.DesignMenu();
+                        }
+       
+                      
+                        break;
+                    }
+
 
                 case "u":
                 case "U":

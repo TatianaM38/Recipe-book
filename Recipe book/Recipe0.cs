@@ -16,7 +16,7 @@ namespace Recipe_book
                 {
                     Console.ForegroundColor = ConsoleColor.DarkCyan;
                     string s1 = xml0.ReadElementString();
-                    Console.WriteLine("                                           " + s1);
+                    Console.WriteLine("                                           " + s1);                  
                 }
                 if (xml0.NodeType == XmlNodeType.Element && xml0.Name == "date")
                 {
@@ -38,7 +38,7 @@ namespace Recipe_book
                 if (xml0.NodeType == XmlNodeType.Element && xml0.Name == "process")
                 {
                     string s5 = xml0.ReadElementString();
-                    Console.WriteLine("Postup prípravy: " + s5);
+                    Console.WriteLine(s5);
                 }
                 if (xml0.NodeType == XmlNodeType.Element && xml0.Name == "author")
                 {
