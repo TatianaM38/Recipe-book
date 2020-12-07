@@ -8,30 +8,128 @@ namespace Recipe_book
     {
         public void FindRecipe() 
         {
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("*Tu sa budú môcť vyhľadať recepty podľa kategorie, názvu, autora a podobne*");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            string str = @"    
+
+
+                             
+                            .────────────────────────────────────────────────────────────────.
+                            |                 [N]  NÁJSŤ RECEPT PODĽA NÁZVU                  |
+                            *────────────────────────────────────────────────────────────────* 
+          
+
+                            .────────────────────────────────────────────────────────────────.
+                            |                 [K]  NÁJSŤ RECEPT PODĽA KATEGÓRIE              |
+                            *────────────────────────────────────────────────────────────────*                         
+                              
+
+                            .────────────────────────────────────────────────────────────────.
+                            |                 [A]  NÁJSŤ RECEPT PODĽA AUTORA                 |
+                            *────────────────────────────────────────────────────────────────* 
+
+
+                            .────────────────────────────────────────────────────────────────.
+                            |                 [D]  NÁJSŤ RECEPT PODĽA DÁTUMU PRIDANIA        |
+                            *────────────────────────────────────────────────────────────────* 
+
+
+                            .────────────────────────────────────────────────────────────────.
+                            |                 [H]  NÁJSŤ RECEPT PODĽA HODNOTENIA             |
+                            *────────────────────────────────────────────────────────────────*";
+
+            Console.WriteLine(str);
+         
             Console.ForegroundColor = ConsoleColor.DarkRed;
             string s = @"
 
-                  .────────────────────────────────────────────────────────────────.
-                  |                [S]  Späť do hlavnej ponuky                     |
-                  *────────────────────────────────────────────────────────────────* ";
+                            .────────────────────────────────────────────────────────────────.
+                            |                [S]  Späť do hlavnej ponuky                     |
+                            *────────────────────────────────────────────────────────────────* ";
             Console.WriteLine(s);
             Console.ReadLine();
 
             char button1 = Convert.ToChar(Console.Read());
             string buttonString1 = button1.ToString();
-            if (buttonString1 == "S")
+             switch (buttonString1)
             {
-                Console.Clear();
-                Menu hlavna = new Menu();
-                hlavna.DesignMenu();
-            }
-            else if (buttonString1 == "s")
-            {
-                Console.Clear();
-                Menu hlavna = new Menu();
-                hlavna.DesignMenu();
+                case "s":
+                case "S":
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Späť do menu");
+                        Menu hlavna = new Menu();
+                        hlavna.DesignMenu();
+
+                        break;
+                    }
+
+                case "n":
+                case "N":
+                    {
+
+                        Console.Clear();
+                        ByName byName = new ByName();
+                        byName.SearchName();
+
+
+                        break;
+
+                    }
+
+
+                case "k":
+                case "K":
+                    {
+                        Console.Clear();
+                        ByCategory byCategory = new ByCategory();
+                        byCategory.SearchCat();
+
+                        break;
+                    }
+
+
+                case "a":
+                case "A":
+                    {
+                        Console.Clear();
+                        ByAuthor byAuthor = new ByAuthor();
+                        byAuthor.SearchAut();
+                        break;
+                    }
+
+
+                case "d":
+                case "D":
+                    {
+                        Console.Clear();
+                        ByDate byDate = new ByDate();
+                        byDate.SearchDate();
+                        
+
+                        break;
+
+                    }
+
+
+                case "h":
+                case "H":
+                    {
+                        Console.Clear();
+                        ByRating byRating = new ByRating();
+                        byRating.SearchRat();
+
+                        break;
+                    }
+
+                default:
+                    {
+
+                        Console.Clear();
+                        
+                        break;
+                    }
+
+
             }
 
             
