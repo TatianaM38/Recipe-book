@@ -43,7 +43,7 @@ namespace Recipe_book
             string s = @"
 
                             .────────────────────────────────────────────────────────────────.
-                            |                [S]  Späť do hlavnej ponuky                     |
+                            |                       [S]  SPÄŤ DO MENU                        |
                             *────────────────────────────────────────────────────────────────* ";
             Console.WriteLine(s);
             Console.ReadLine();
