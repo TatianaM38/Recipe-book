@@ -48,6 +48,7 @@ namespace Recipe_book
                              |                [S]  SPÄŤ NA VŠETKY KATEGÓRIE                   |
                              *────────────────────────────────────────────────────────────────* ";
             Console.WriteLine(s);
+            Console.ReadLine();
 
             char button = Convert.ToChar(Console.Read());
             string buttonString = button.ToString();

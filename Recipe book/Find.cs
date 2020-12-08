@@ -125,7 +125,9 @@ namespace Recipe_book
                     {
 
                         Console.Clear();
-                        
+                        Find findr = new Find();
+                        findr.FindRecipe();
+
                         break;
                     }
 
