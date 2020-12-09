@@ -72,7 +72,6 @@ namespace Recipe_book
                         Recipe0 recipe0 = new Recipe0();
                         recipe0.Recept0();
 
-
                         break;
 
                     }
@@ -134,6 +133,7 @@ namespace Recipe_book
                         Console.Clear();
                         Easy easy = new Easy();
                         easy.EasyCat();
+
                         break;
                     }
 

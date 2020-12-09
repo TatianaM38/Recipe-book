@@ -59,7 +59,6 @@ namespace Recipe_book
                         Recipe1 recipe1 = new Recipe1();
                         recipe1.Recept1();
 
-
                         break;
 
                     }
@@ -81,7 +80,6 @@ namespace Recipe_book
                         Recipe4 recipe4 = new Recipe4();
                         recipe4.Recept4();
 
-
                         break;
                     }
 
@@ -91,8 +89,6 @@ namespace Recipe_book
                         Console.Clear();
                         Recipe9 recipe9 = new Recipe9();
                         recipe9.Recept9();
-
-
 
                         break;
 
@@ -105,6 +101,7 @@ namespace Recipe_book
                         Console.Clear();
                         Medium medium = new Medium();
                         medium.MediumCat();
+
                         break;
                     }
 

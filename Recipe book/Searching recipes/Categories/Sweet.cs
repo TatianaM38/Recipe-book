@@ -59,7 +59,6 @@ namespace Recipe_book
                         Recipe0 recipe0 = new Recipe0();
                         recipe0.Recept0();
 
-
                         break;
 
                     }
@@ -82,8 +81,7 @@ namespace Recipe_book
                         Console.Clear();
                         Recipe5 recipe5 = new Recipe5();
                         recipe5.Recept5();
-                       
-
+                      
                         break;
                     }
 
@@ -95,8 +93,6 @@ namespace Recipe_book
                         Recipe7 recipe7 = new Recipe7();
                         recipe7.Recept7();
                       
-
-
                         break;
 
                     }
@@ -108,6 +104,7 @@ namespace Recipe_book
                         Console.Clear();
                         Sweet sweet = new Sweet();
                         sweet.SweetCat();
+
                         break;
                     }
 
