@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Xml;
 
 namespace Recipe_book
@@ -47,12 +45,8 @@ namespace Recipe_book
                     string s6 = xml1.ReadElementString();
                     Console.WriteLine("Autor receptu: " + s6);
                 }
-                if (xml1.NodeType == XmlNodeType.Element && xml1.Name == "thirdrating")
-                {
-                    Console.WriteLine("");
-                    string s7 = xml1.ReadElementString();
-                    Console.WriteLine("Ohodnoťte recept: " + s7);
-                }
+               
+                
             }
 
 
@@ -75,21 +69,20 @@ namespace Recipe_book
                   |                      [S]  Späť na recepty                      |
                   *────────────────────────────────────────────────────────────────* ";
             Console.WriteLine(s);
-            Console.ReadLine();
 
             char button1 = Convert.ToChar(Console.Read());
             string buttonString1 = button1.ToString();
             if (buttonString1 == "S")
             {
                 Console.Clear();
-                Menu hlavna = new Menu();
-                hlavna.DesignMenu();
+                Recipes recipes = new Recipes();
+                recipes.RecipeClass();
             }
             else if (buttonString1 == "s")
             {
                 Console.Clear();
-                Menu hlavna = new Menu();
-                hlavna.DesignMenu();
+                Recipes recipes = new Recipes();
+                recipes.RecipeClass();
             }
         }
     }

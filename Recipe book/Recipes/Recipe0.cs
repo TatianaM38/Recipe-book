@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml;
 using System.IO;
 
@@ -70,22 +68,21 @@ namespace Recipe_book
                   .────────────────────────────────────────────────────────────────.
                   |                      [S]  Späť na recepty                      |
                   *────────────────────────────────────────────────────────────────* ";
-            Console.WriteLine(s);
-            Console.ReadLine();
+            Console.WriteLine(s);         
 
             char button1 = Convert.ToChar(Console.Read());
             string buttonString1 = button1.ToString();
             if (buttonString1 == "S")
             {
                 Console.Clear();
-                Menu hlavna = new Menu();
-                hlavna.DesignMenu();
+                Recipes recipes = new Recipes();
+                recipes.RecipeClass();
             }
             else if (buttonString1 == "s")
             {
                 Console.Clear();
-                Menu hlavna = new Menu();
-                hlavna.DesignMenu();
+                Recipes recipes = new Recipes();
+                recipes.RecipeClass();
             }
 
 
