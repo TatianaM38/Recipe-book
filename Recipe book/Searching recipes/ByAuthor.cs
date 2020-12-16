@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Xml;
-using System.IO;
+
 
 namespace Recipe_book
 {
@@ -178,6 +176,7 @@ namespace Recipe_book
                             |                           [S]  SPÄŤ                            |
                             *────────────────────────────────────────────────────────────────* ";
                         Console.WriteLine(s1);
+
                         Console.ReadLine();
 
                         char button1 = Convert.ToChar(Console.Read());

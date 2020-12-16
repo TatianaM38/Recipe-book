@@ -126,6 +126,7 @@ namespace Recipe_book
                         Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine("Vytvorené T.Michalíkovou a B.Dujčíkovou.");
                         Console.ForegroundColor = ConsoleColor.DarkRed;
+
                         string s = @"
 
 

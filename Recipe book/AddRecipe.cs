@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Xml.Linq;
-using System.IO;
 using System.Xml;
 
 namespace Recipe_book
@@ -9,42 +7,41 @@ namespace Recipe_book
     {
         public void AddRec()
         {
-         
-            Console.WriteLine("Zadajte meno receptu: ");
-            Console.ReadLine();
-            string name = Console.ReadLine();           
-            Console.WriteLine("Zadajte dnešný dátum: ");
-            string date = Console.ReadLine();
-            Console.WriteLine("Zadajte kategorie receptu (Sladký/Slaný , Nízka/Stredá náročnosť): ");
-            string categories = Console.ReadLine();
-            Console.WriteLine("Zadajte ingrediencie receptu: ");
-            string ingr = Console.ReadLine();
-            Console.WriteLine("Zadajte postup prípravy receptu :");
-            string proc = Console.ReadLine();
-            Console.WriteLine("Zadajte meno autora: ");
-            string author = Console.ReadLine();
 
+            string filename = "C:\\Users\\Administrátor\\Desktop\\NewRecipe.xml";
+            XmlTextWriter xmlTextWriter = new XmlTextWriter(filename, System.Text.Encoding.UTF8);
+            xmlTextWriter.Formatting = Formatting.Indented;
+            xmlTextWriter.WriteStartDocument();
+            xmlTextWriter.WriteStartElement("Recept11");
+        
+            
+                xmlTextWriter.WriteStartElement("Recept");
 
-            XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("C:\\Users\\Administrátor\\Desktop\\Recipe.xml");
-            XElement Recept = new XElement("Recipe",
-                new XAttribute("Name", name),
-                new XElement("Date", date),
-                new XElement("Categories", categories),
-                new XElement("Ingredients", ingr),
-                new XElement("Process", proc),
-                new XElement("Author", author));
+                Console.WriteLine("Zadajte názov receptu: ");
+                xmlTextWriter.WriteElementString("elevenName", Console.ReadLine());
+                Console.ReadLine();
 
-            xmlDoc.Save("C:\\Users\\Administrátor\\Desktop\\Recipe.xml");
+                Console.WriteLine("Zadajte dnešný dátum: ");
+                xmlTextWriter.WriteElementString("elevenDate", Console.ReadLine());
 
-            Console.ReadLine();
+                Console.WriteLine("Zadajte kategorie receptu (Sladký/Slaný , Nízka/Stredá náročnosť): ");
+                xmlTextWriter.WriteElementString("elevenCat", Console.ReadLine());
 
-            Console.WriteLine(name);
-            Console.WriteLine(date);
-            Console.WriteLine(categories);
-            Console.WriteLine(ingr);
-            Console.WriteLine(proc);
-            Console.WriteLine(author);
+                Console.WriteLine("Zadajte ingrediencie receptu: ");
+                xmlTextWriter.WriteElementString("eleveningr", Console.ReadLine());
+
+                Console.WriteLine("Zadajte postup prípravy: ");
+                xmlTextWriter.WriteElementString("elevenproc", Console.ReadLine());
+
+                Console.WriteLine("Zadajte meno autora: ");
+                xmlTextWriter.WriteElementString("elevenauthor", Console.ReadLine());
+
+            
+            xmlTextWriter.WriteEndElement();
+            xmlTextWriter.WriteEndDocument();
+            xmlTextWriter.Flush();
+            xmlTextWriter.Close();
+
 
             Console.ForegroundColor = ConsoleColor.DarkRed;
             string s = @"
