@@ -56,6 +56,7 @@ namespace Recipe_book
                   |                [S]  Späť do hlavnej ponuky                     |
                   *────────────────────────────────────────────────────────────────* ";
             Console.WriteLine(s);
+            Console.ReadLine();
 
             char button1 = Convert.ToChar(Console.Read());
             string buttonString1 = button1.ToString();

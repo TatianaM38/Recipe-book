@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Xml;
-using System.Collections.Generic;
-using System.Linq;
-
 
 namespace Recipe_book
 {
@@ -28,11 +24,7 @@ namespace Recipe_book
             Console.ForegroundColor = ConsoleColor.White;
 
             string a = @"   
-           ***************************************************************************************************
-                           Ak chcete zobraziť nejaký z týchto vynikajúcich receptov 
-                stlačte na klávese číslo, ktoré je pri názve daného receptu a potvrďte klávesou Enter :).
-           ***************************************************************************************************
-
+          
 
 
                              .────────────────────────────────────────────────────────────────.
@@ -121,20 +113,15 @@ namespace Recipe_book
 
                             break;
                         }
-
                     case "0":
                         {
-
                           Console.Clear();
                           Recipe0 recipe0 = new Recipe0();
                           recipe0.Recept0();
 
-                         
                             break;
 
                         }
-
-
                     case "1":
                         {
                             Console.Clear();
@@ -143,15 +130,13 @@ namespace Recipe_book
 
                             break;
                         }
-
-
                     case "2":
                         {
                             Console.Clear();
                             Recipe2 recipe2 = new Recipe2();
                             recipe2.Recept2();
 
-                        break;
+                            break;
                         }
 
 

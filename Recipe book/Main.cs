@@ -6,7 +6,6 @@ namespace Recipe_book
     {
         public void DesignMenu()
         {
-         
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.Title = "Yummy book";
@@ -22,10 +21,10 @@ namespace Recipe_book
                            *                                                                   *
                            * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * ";
 
-            Console.WriteLine(title);
+               Console.WriteLine(title);
    
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
-            string recepty = @" 
+               Console.ForegroundColor = ConsoleColor.DarkCyan;
+               string recepty = @" 
                             .────────────────────────────────────────────────────────────────.
                             |                        [R]  RECEPTY                            |
                             *────────────────────────────────────────────────────────────────* 
@@ -46,8 +45,8 @@ namespace Recipe_book
 
               Console.Write(recepty);
 
-            Console.ForegroundColor = ConsoleColor.DarkRed;
-            string ext = @"
+               Console.ForegroundColor = ConsoleColor.DarkRed;
+               string ext = @"
 
                             .────────────────────────────────────────────────────────────────.
                             |                        [U] UKONČIŤ APLIKÁCIU                   |
@@ -55,17 +54,8 @@ namespace Recipe_book
 
 ";
             Console.WriteLine(ext);
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("                   --------------------------------------------------------------------------------");
-            Console.WriteLine("                     Ak chcete prejsť na recepty, stlačte na klávesu 'r' a potvrďte klávesou Enter.");
-            Console.WriteLine("                  *  Ak chcete nájsť recepty, stlačte na klávesu 'n' a potvrďte klávesou Enter.    *");
-            Console.WriteLine("                     Ak chcete pridať recepty, stlačte na klávesu 'p' a potvrďte klávesou Enter.");
-            Console.WriteLine("                   --------------------------------------------------------------------------------");
-
-            Console.ForegroundColor = ConsoleColor.DarkRed;
-           
+            
           
-
             char button = Convert.ToChar(Console.Read());
             string buttonString = button.ToString();
             switch (buttonString)
@@ -119,7 +109,7 @@ namespace Recipe_book
 ";
                         Console.WriteLine(str);
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.WriteLine("Vítame vás v tomto receptári :-* ");
+                        Console.WriteLine("Vítame vás v tomto receptári :) ");
                         Console.WriteLine("Nájdete tu plno vynikajúcich receptov rôznych druhov z ktorých si každý vyberie.");
                         Console.WriteLine("Dúfam, že vám budú všetky recepty chutiť <3 ");
                         Console.WriteLine("");

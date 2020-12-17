@@ -36,7 +36,6 @@ namespace Recipe_book
                 Console.WriteLine("Zadajte meno autora: ");
                 xmlTextWriter.WriteElementString("elevenauthor", Console.ReadLine());
 
-            
             xmlTextWriter.WriteEndElement();
             xmlTextWriter.WriteEndDocument();
             xmlTextWriter.Flush();
@@ -48,8 +47,12 @@ namespace Recipe_book
 
                   .────────────────────────────────────────────────────────────────.
                   |                [S]  Späť do hlavnej ponuky                     |
+                  *────────────────────────────────────────────────────────────────* 
+                  .────────────────────────────────────────────────────────────────.
+                  |                [U] UKONČIŤ APLIKÁCIU                           |
                   *────────────────────────────────────────────────────────────────* ";
             Console.WriteLine(s);
+
 
             char button1 = Convert.ToChar(Console.Read());
             string buttonString1 = button1.ToString();
@@ -65,8 +68,14 @@ namespace Recipe_book
                 Menu hlavna = new Menu();
                 hlavna.DesignMenu();
             }
-
-
+            else if (buttonString1 == "u")
+            {
+                Environment.Exit(0);
+            }
+            else if (buttonString1 == "U")
+            {
+                Environment.Exit(0);
+            }
 
         }
     }

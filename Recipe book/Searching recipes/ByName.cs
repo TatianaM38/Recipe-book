@@ -22,13 +22,6 @@ namespace Recipe_book
             Console.WriteLine("Zadajte časť názvu recepta, ktorý hľadáte malými písmenami bez diakritiky : ");
             string str = Console.ReadLine();
 
-            Console.ForegroundColor = ConsoleColor.DarkRed;
-            string s = @"
-                             .────────────────────────────────────────────────────────────────.
-                             |                         [S]  SPÄŤ                              |
-                             *────────────────────────────────────────────────────────────────* ";
-            Console.WriteLine(s);
-
 
             char button1 = Convert.ToChar(Console.Read());
             string buttonString1 = button1.ToString();
